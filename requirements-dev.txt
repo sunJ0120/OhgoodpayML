@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest==9.1.1
+
+# 오굿점수 v2 스코어카드 학습 파이프라인 (training/scorecard) — 운영 이미지에는 포함하지 않는다
+numpy==2.5.4
+pandas==3.0.6
+statsmodels==0.15.0
+ucimlrepo==0.0.7
