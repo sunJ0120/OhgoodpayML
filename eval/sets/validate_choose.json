@@ -1,0 +1,178 @@
+{
+ "prompt_key": "validate_choose",
+ "kind": "validation",
+ "cases": [
+  {
+   "id": "c01",
+   "category": "normal",
+   "input": "응",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c02",
+   "category": "normal",
+   "input": "네 좋아요",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c03",
+   "category": "normal",
+   "input": "추천해줘",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c04",
+   "category": "normal",
+   "input": "추천 받을래",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c05",
+   "category": "normal",
+   "input": "ㅇㅇ 고고",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c06",
+   "category": "normal",
+   "input": "한번 볼까",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c07",
+   "category": "normal",
+   "input": "괜찮네",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c08",
+   "category": "normal",
+   "input": "상품 보여줘",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c09",
+   "category": "normal",
+   "input": "👍",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c10",
+   "category": "normal",
+   "input": "사고싶어",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c11",
+   "category": "normal",
+   "input": "응 추천해줘 좋아 보여줘",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  },
+  {
+   "id": "c12",
+   "category": "edge_nonsense",
+   "input": "아니",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c13",
+   "category": "edge_nonsense",
+   "input": "싫어",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c14",
+   "category": "edge_nonsense",
+   "input": "다음에 할게",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c15",
+   "category": "edge_nonsense",
+   "input": "나중에",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c16",
+   "category": "edge_nonsense",
+   "input": "글쎄",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c17",
+   "category": "edge_nonsense",
+   "input": "설명해줘",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c18",
+   "category": "edge_empty",
+   "input": "",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c19",
+   "category": "edge_empty",
+   "input": "   ",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "c20",
+   "category": "edge_long",
+   "input": "음 고민을 좀 해봤는데 이번에는 한번 구경해 보는 것도 나쁘지 않을 것 같아. 요즘 필요한 물건도 몇 가지 있었고 가격만 적당하다면 굳이 오래 고민할 이유도 없을 것 같거든. 그래서 그냥 그래 그럼 한번 추천해줘 부탁할게. 너무 비싼 건 말고 적당한 걸로 부탁해.",
+   "expected": {
+    "is_valid": true,
+    "normalized": "recommend"
+   }
+  }
+ ]
+}
