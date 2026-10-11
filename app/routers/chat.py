@@ -2,6 +2,7 @@
 import logging
 
 from fastapi import APIRouter, HTTPException, Depends
+from app.llm.deps import get_chat_service, get_validation_service
 from app.schemas.chat.basic_chat_response import BasicChatResponse
 from app.schemas.chat.basic_chat_request import BasicChatRequest
 from app.domain.chat.chat_service import ChatService
@@ -23,7 +24,7 @@ router = APIRouter(
 )
 async def generate_chat(
     request: BasicChatRequest,
-    chat_service: ChatService = Depends(lambda: ChatService())
+    chat_service: ChatService = Depends(get_chat_service)
 ):
     # 채팅 API
     try:
@@ -54,22 +55,25 @@ async def generate_chat(
 )
 async def validation_chat(
         request: ValidInputRequest,
-        validation_service: ValidationService = Depends(lambda: ValidationService())
+        validation_service: ValidationService = Depends(get_validation_service)
 ):
     try:
-        # ValidationService로 검증
-        is_valid, message = await validation_service.validate_input_for_flow(
+        # ValidationService로 검증 (프롬프트는 요청으로 받는다)
+        outcome = await validation_service.validate_input_for_flow(
             flow=request.flow,
-            input_message=request.input_message
+            input_message=request.input_message,
+            spec=request.prompts.main,
         )
 
         return ValidInputResponse.of(
             customer_id=request.customer_id,
             session_id=request.session_id,
             input_message=request.input_message,
-            is_valid=is_valid,
-            message=message,
-            flow=request.flow
+            is_valid=outcome.is_valid,
+            message=outcome.message,
+            flow=request.flow,
+            normalized=outcome.normalized,
+            calls=[outcome.call],
         )
 
     except ValueError as e:
