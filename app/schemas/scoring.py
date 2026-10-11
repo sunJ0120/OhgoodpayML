@@ -24,6 +24,20 @@ class InputFeaturesIn(BaseModel):
         populate_by_name=True,  # alias 채우기 허용
         extra="forbid",         # 오타/미매핑 키가 오면 422로 즉시 알림
     )
+# /score 전용 입력. 키는 도메인 InputFeatures 와 동일한 snake_case.
+# 모르는 키나 누락된 키를 기본값으로 덮지 않고 422 로 거절한다.
+class ScoreRequest(BaseModel):
+    extension_this_month: bool
+    auto_extension_this_month: bool
+    auto_extension_cnt_12m: int
+    grade_point: int
+    is_blocked: bool
+    payment_cnt_12m: int
+    payment_amount_12m: float
+    current_cycle_spend: float
+
+    model_config = ConfigDict(extra="forbid")
+
 class ReasonOut(BaseModel):
     code: str
     label: str
