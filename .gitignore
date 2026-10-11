@@ -8,3 +8,7 @@ __pycache__/
 
 # 오굿점수 v2 학습: UCI 원본 캐시는 git 에 올리지 않는다
 training/scorecard/.cache/
+
+# 평가 실행 결과 (eval/run_eval.py)
+eval/results/*
+!eval/results/.gitkeep

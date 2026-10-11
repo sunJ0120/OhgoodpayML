@@ -1,0 +1,177 @@
+{
+ "prompt_key": "validate_hobby",
+ "kind": "validation",
+ "cases": [
+  {
+   "id": "h01",
+   "category": "normal",
+   "input": "운동",
+   "expected": {
+    "is_valid": true,
+    "normalized": "운동"
+   }
+  },
+  {
+   "id": "h02",
+   "category": "normal",
+   "input": "요즘 퇴근하고 넷플 보는게 낙이야",
+   "expected": {
+    "is_valid": true,
+    "normalized": [
+     "넷플",
+     "넷플릭스"
+    ]
+   }
+  },
+  {
+   "id": "h03",
+   "category": "normal",
+   "input": "게임",
+   "expected": {
+    "is_valid": true,
+    "normalized": "게임"
+   }
+  },
+  {
+   "id": "h04",
+   "category": "normal",
+   "input": "주말마다 한강에서 자전거",
+   "expected": {
+    "is_valid": true,
+    "normalized": "자전거"
+   }
+  },
+  {
+   "id": "h05",
+   "category": "normal",
+   "input": "요리하는 거 좋아해",
+   "expected": {
+    "is_valid": true,
+    "normalized": "요리"
+   }
+  },
+  {
+   "id": "h06",
+   "category": "normal",
+   "input": "영화랑 음악",
+   "expected": {
+    "is_valid": true
+   }
+  },
+  {
+   "id": "h07",
+   "category": "normal",
+   "input": "카페 가서 공부하기",
+   "expected": {
+    "is_valid": true
+   }
+  },
+  {
+   "id": "h08",
+   "category": "normal",
+   "input": "workout",
+   "expected": {
+    "is_valid": true
+   }
+  },
+  {
+   "id": "h09",
+   "category": "normal",
+   "input": "없어",
+   "expected": {
+    "is_valid": true,
+    "normalized": "취미 없음"
+   }
+  },
+  {
+   "id": "h10",
+   "category": "normal",
+   "input": "뭐... 특별한 건 없고 유튜브나 봐",
+   "expected": {
+    "is_valid": true,
+    "normalized": "유튜브"
+   }
+  },
+  {
+   "id": "h11",
+   "category": "normal",
+   "input": "⚽",
+   "expected": {
+    "is_valid": true
+   }
+  },
+  {
+   "id": "h12",
+   "category": "normal",
+   "input": "캠핑 다니는 게 요즘 제일 재밌어",
+   "expected": {
+    "is_valid": true,
+    "normalized": "캠핑"
+   }
+  },
+  {
+   "id": "h13",
+   "category": "edge_nonsense",
+   "input": "안녕",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h14",
+   "category": "edge_nonsense",
+   "input": "asdf",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h15",
+   "category": "edge_nonsense",
+   "input": "추천해줘",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h16",
+   "category": "edge_nonsense",
+   "input": "출근",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h17",
+   "category": "edge_empty",
+   "input": "",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h18",
+   "category": "edge_empty",
+   "input": "   ",
+   "expected": {
+    "is_valid": false
+   }
+  },
+  {
+   "id": "h19",
+   "category": "edge_long",
+   "input": "저는 평일에는 회사 일 때문에 바쁘지만 주말마다 가까운 산에 올라가서 사진을 찍는 걸 정말 좋아해요. 계절마다 풍경이 달라서 등산이랑 사진 찍기가 제 가장 큰 취미가 되었고 요즘은 장비도 하나씩 모으는 재미에 빠져 있어요.",
+   "expected": {
+    "is_valid": true
+   }
+  },
+  {
+   "id": "h20",
+   "category": "edge_long",
+   "input": "어제 뉴스에서 새로운 교통 정책이 발표됐다는 이야기를 봤는데 시행 시기와 적용 대상이 아직 명확하지 않다고 하더라. 지하철 노선 개편과 버스 요금 조정이 같이 논의되고 있다는데 자세한 내용은 다음 달 공청회에서 나온다고 해서 기다려 보려고.",
+   "expected": {
+    "is_valid": false
+   }
+  }
+ ]
+}

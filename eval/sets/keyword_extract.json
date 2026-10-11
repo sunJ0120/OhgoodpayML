@@ -1,0 +1,163 @@
+{
+ "prompt_key": "keyword_extract",
+ "kind": "keyword",
+ "cases": [
+  {
+   "id": "k01",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "러닝",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 120000
+   }
+  },
+  {
+   "id": "k02",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "게임",
+    "mood": "neutral",
+    "credit_limit": 300000,
+    "balance": 200000
+   }
+  },
+  {
+   "id": "k03",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "요리",
+    "mood": "positive",
+    "credit_limit": 250000,
+    "balance": 150000
+   }
+  },
+  {
+   "id": "k04",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "넷플",
+    "mood": "negative",
+    "credit_limit": 200000,
+    "balance": 80000
+   }
+  },
+  {
+   "id": "k05",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "독서",
+    "mood": "neutral",
+    "credit_limit": 300000,
+    "balance": 100000
+   }
+  },
+  {
+   "id": "k06",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "카페",
+    "mood": "positive",
+    "credit_limit": 150000,
+    "balance": 90000
+   }
+  },
+  {
+   "id": "k07",
+   "category": "normal",
+   "input": "",
+   "context": {
+    "hobby": "그림",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 300000
+   }
+  },
+  {
+   "id": "k08",
+   "category": "edge_low_balance",
+   "input": "",
+   "context": {
+    "hobby": "운동",
+    "mood": "negative",
+    "credit_limit": 100000,
+    "balance": 20000
+   }
+  },
+  {
+   "id": "k09",
+   "category": "edge_low_balance",
+   "input": "",
+   "context": {
+    "hobby": "캠핑",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 35000
+   }
+  },
+  {
+   "id": "k10",
+   "category": "edge_no_hobby",
+   "input": "",
+   "context": {
+    "hobby": "",
+    "mood": "neutral",
+    "credit_limit": 200000,
+    "balance": 100000
+   }
+  },
+  {
+   "id": "k11",
+   "category": "edge_no_hobby",
+   "input": "",
+   "context": {
+    "hobby": "",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 150000
+   }
+  },
+  {
+   "id": "k12",
+   "category": "edge_prev_keyword",
+   "input": "",
+   "context": {
+    "hobby": "운동",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 120000,
+    "prev_keyword": "러닝화"
+   }
+  },
+  {
+   "id": "k13",
+   "category": "edge_prev_keyword",
+   "input": "",
+   "context": {
+    "hobby": "등산",
+    "mood": "neutral",
+    "credit_limit": 250000,
+    "balance": 100000,
+    "prev_keyword": "등산화"
+   }
+  },
+  {
+   "id": "k14",
+   "category": "edge_prev_keyword",
+   "input": "",
+   "context": {
+    "hobby": "요리",
+    "mood": "positive",
+    "credit_limit": 300000,
+    "balance": 150000,
+    "prev_keyword": "프라이팬"
+   }
+  }
+ ]
+}
